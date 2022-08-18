@@ -1,0 +1,20 @@
+coverage:
+  precision: 2
+  round: down
+  range: 70...100
+  status:
+    project: true
+    patch: true
+    changes: false
+  ignore:
+    - "libcdata/*"
+    - "libcerror/*"
+    - "libclocale/*"
+    - "libcnotify/*"
+    - "libcthreads/*"
+    - "libfdatetime/*"
+    - "libfguid/*"
+    - "libfole/*"
+    - "libfwps/*"
+    - "libuna/*"
+    - "tests/*"
