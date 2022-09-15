@@ -347,6 +347,16 @@ int libfwsi_item_list_copy_from_byte_stream(
 
 			goto on_error;
 		}
+
+		if (0x00000000 == *(internal_item->value))
+		{
+			internal_item->data = (uint8_t*)byte_stream;
+		}
+		else
+		{
+			internal_item->data = NULL;
+		}
+
 		byte_stream                   += shell_item_size;
 		byte_stream_size              -= shell_item_size;
 		internal_item_list->data_size += (size_t) shell_item_size;

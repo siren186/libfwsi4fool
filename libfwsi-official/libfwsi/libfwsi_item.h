@@ -54,6 +54,10 @@ struct libfwsi_internal_item
 	 */
 	uint16_t data_size;
 
+	/* The data
+	 */
+	uint8_t* data;
+
 	/* The item value
 	 */
         intptr_t *value;
@@ -130,6 +134,13 @@ int libfwsi_item_get_data_size(
      libfwsi_item_t *item,
      size_t *data_size,
      libcerror_error_t **error );
+
+LIBFWSI_EXTERN \
+int libfwsi_item_get_data(
+     libfwsi_item_t *item,
+     uint8_t *data_buffer,
+     const size_t* data_buffer_size,
+     libcerror_error_t **error);
 
 LIBFWSI_EXTERN \
 int libfwsi_item_get_number_of_extension_blocks(

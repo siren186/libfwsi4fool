@@ -1501,6 +1501,49 @@ int libfwsi_item_get_data_size(
 	return( 1 );
 }
 
+/* Retrieves the data
+ * Returns 1 if successful or -1 on error
+ */
+LIBFWSI_EXTERN \
+int libfwsi_item_get_data(
+     libfwsi_item_t *item,
+     uint8_t *data_buffer,
+     const size_t* data_buffer_size,
+     libcerror_error_t **error)
+{
+	libfwsi_internal_item_t *internal_item = NULL;
+	static char *function = "libfwsi_item_get_data";
+
+	if (item == NULL)
+	{
+		libcerror_error_set(
+			error,
+			LIBCERROR_ERROR_DOMAIN_ARGUMENTS,
+			LIBCERROR_ARGUMENT_ERROR_INVALID_VALUE,
+			"%s: invalid item.",
+			function);
+
+		return(-1);
+	}
+	internal_item = (libfwsi_internal_item_t *)item;
+
+	if (data_buffer_size == NULL
+		|| *data_buffer_size < internal_item->data_size)
+	{
+		libcerror_error_set(
+			error,
+			LIBCERROR_ERROR_DOMAIN_ARGUMENTS,
+			LIBCERROR_ARGUMENT_ERROR_INVALID_VALUE,
+			"%s: invalid data size.",
+			function);
+
+		return(-1);
+	}
+	memcpy(data_buffer, internal_item->data, internal_item->data_size);
+
+	return(1);
+}
+
 /* Retrieves the number of extension blocks
  * Returns 1 if successful or -1 on error
  */
