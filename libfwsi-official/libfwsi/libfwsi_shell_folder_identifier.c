@@ -142,6 +142,8 @@ uint8_t libfwsi_shell_folder_identifier_unknown[ 16 ] = {
 uint8_t libfwsi_shell_folder_identifier_user_desktop[16] = {
 	0x3a, 0xcc, 0xbf, 0xb4, 0x2c, 0xdb, 0x4c, 0x42, 0xb0, 0x29, 0x7f, 0xe9, 0x9a, 0x87, 0xc6, 0x41 };
 
+uint8_t libfwsi_shell_folder_identifier_user_downloads[16] = {
+    0x05, 0x39, 0x8e, 0x08, 0x23, 0x03, 0x02, 0x4b, 0x98, 0x26, 0x5d, 0x99, 0x42, 0x8e, 0x11, 0x5f };
 /* The shell folder identifiers
  */
 libfwsi_shell_folder_identifier_definition_t libfwsi_shell_folder_identifier_definitions[ ] = {
@@ -179,6 +181,7 @@ libfwsi_shell_folder_identifier_definition_t libfwsi_shell_folder_identifier_def
 	{ libfwsi_shell_folder_identifier_window_switcher,		"Window Switcher" },
 	{ libfwsi_shell_folder_identifier_windows_update,		"Windows Update" },
 	{ libfwsi_shell_folder_identifier_user_desktop,			"User Desktop" },
+    { libfwsi_shell_folder_identifier_user_downloads,       "User Downloads" },
 
 	{ libfwsi_shell_folder_identifier_unknown,			"Unknown" } };
 
