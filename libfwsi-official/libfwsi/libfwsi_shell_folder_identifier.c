@@ -144,6 +144,13 @@ uint8_t libfwsi_shell_folder_identifier_user_desktop[16] = {
 
 uint8_t libfwsi_shell_folder_identifier_user_downloads[16] = {
     0x05, 0x39, 0x8e, 0x08, 0x23, 0x03, 0x02, 0x4b, 0x98, 0x26, 0x5d, 0x99, 0x42, 0x8e, 0x11, 0x5f };
+
+uint8_t libfwsi_shell_folder_identifier_user_pictures[16] = {
+    0xd4, 0x3a, 0xad, 0x24, 0x69, 0xa5, 0x30, 0x45, 0x98, 0xe1, 0xab, 0x02, 0xf9, 0x41, 0x7a, 0xa8 };
+
+uint8_t libfwsi_shell_folder_identifier_user_documents[16] = {
+    0x92, 0x2b, 0x16, 0xd3, 0x65, 0x93, 0x7a, 0x46, 0x95, 0x6b, 0x92, 0x70, 0x3a, 0xca, 0x08, 0xaf };
+
 /* The shell folder identifiers
  */
 libfwsi_shell_folder_identifier_definition_t libfwsi_shell_folder_identifier_definitions[ ] = {
@@ -182,6 +189,8 @@ libfwsi_shell_folder_identifier_definition_t libfwsi_shell_folder_identifier_def
 	{ libfwsi_shell_folder_identifier_windows_update,		"Windows Update" },
 	{ libfwsi_shell_folder_identifier_user_desktop,			"User Desktop" },
     { libfwsi_shell_folder_identifier_user_downloads,       "User Downloads" },
+    { libfwsi_shell_folder_identifier_user_pictures,        "User Pictures" },
+    { libfwsi_shell_folder_identifier_user_documents,       "User Documents" },
 
 	{ libfwsi_shell_folder_identifier_unknown,			"Unknown" } };
 
